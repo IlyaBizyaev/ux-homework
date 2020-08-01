@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>Мурпаспорт</title>
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://fonts.googleapis.com/css
+      ?family=Noto+Sans|PT+Sans+Narrow&display=swap&subset=cyrillic"
+    rel="stylesheet">
+  </head>
+  <body>
+    <header class="site-header">
+      <h1 class="site-header__store-logo">Мурпаспорт</h1>
+    </header>
+    <aside class="sidebar">
+      <nav>
+        <h1 class="sidebar__heading">Меню</h1>
+        <ul class="no-bullet-list">
+          <li><a class="sidebar__link" href="#data">Данные</a></li>
+          <li><a class="sidebar__link" href="#vaccinations">Прививки</a></li>
+          <li><a class="sidebar__link" href="#gallery">Галерея</a></li>
+          <li><a class="sidebar__link" href="#feedback">Обратная связь</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="content">
+      <section class="card">
+        <h1 class="heading" id="data">Данные</h1>
+        <div class="img-wrapper card__img-wrapper">
+          <img class="card__img" src="img/1.jpg" alt="Котофей и машинка" title="Котофей и машинка">
+        </div>
+        <div class="card__description">
+          <p class="card__text">Имя: Котофей</p>
+          <p class="card__text">Фамилия: Константинопольский</p>
+          <p class="card__text">Порода: Мейн-кун</p>
+          <p class="card__text">Дата рождения: 11.08.2015</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h1 class="card__heading" id="vaccinations">Прививки</h1>
+        <div class="card__description">
+          <ol class="card__ordered-list">
+            <li class="card__text">От чувства собственной важности</li>
+            <li class="card__text">От нелюбви к людям</li>
+            <li class="card__text">Для лучшей охоты за мышами</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="card">
+        <h1 class="card__heading" id="gallery">Галерея</h1>
+        <div class="img-gallery">
+          <div class="img-wrapper card__img-wrapper">
+            <img class="img-gallery__img" src="img/1.jpg" alt="Котофей и машинка"
+              title="Котофей и машинка">
+          </div>
+          <div class="img-wrapper card__img-wrapper">
+            <img class="img-gallery__img" src="img/2.jpg" alt="Задумчивый Котофей"
+              title="Задумчивый Котофей">
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h1 class="card__heading" id="feedback">Обратная связь</h1>
+        <form class="feedback-form">
+          <label class="feedback-form__label" for="comment">Ваш комментарий:</label>
+          <textarea class="feedback-form__field" id="comment" name="comment" required></textarea>
+          <label class="feedback-form__label" for="email">Ваш e-mail:</label>
+          <input class="feedback-form__field" id="email" name="email" type="email" required>
+          <button class="button" type="submit">Отправить</button>
+        </form>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__text">
+        Напишите нам: <a href="mailto:support@murpasport.ru">support@murpasport.ru</a>
+      </p>
+      <p class="footer__text footer__copyright">
+        &copy; 2019 ООО &laquo;<a href="#">Мурпаспорт</a>&raquo;
+      </p>
+    </footer>
+    <script type="text/javascript" src="./simulation.js"></script>
+  </body>
+</html>

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Яндекс</title>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+  <body>
+    <input type="checkbox" checked class="hidden-control checkbox-trending" id="checkbox-trending">
+    <input type="checkbox" checked class="hidden-control checkbox-jokes" id="checkbox-jokes">
+    <input type="checkbox" checked class="hidden-control checkbox-tv" id="checkbox-tv">
+    <input type="checkbox" checked class="hidden-control checkbox-cars" id="checkbox-cars">
+    <input type="checkbox" checked class="hidden-control checkbox-weather" id="checkbox-weather">
+    <input type="checkbox" checked class="hidden-control checkbox-traffic" id="checkbox-traffic">
+    <input type="checkbox" checked class="hidden-control checkbox-map" id="checkbox-map">
+    <input type="checkbox" checked class="hidden-control checkbox-affiche" id="checkbox-affiche">
+    <header class="header">
+      <div class="header__city">
+        <svg xmlns="http://www.w3.org/2000/svg" class="city__icon">
+          <path d="M15 3L3.1 8.3l5.8.8.5 5.5z"/>
+        </svg>
+        Санкт-Петербург
+      </div>
+      <div class="header__spacing"></div>
+      <div class="header__settings">
+        <input type="checkbox" class="header__settings-input" id="checkbox-settings">
+        <label for="checkbox-settings" class="header__settings-label">Настройки</label>
+        <ul class="settings__dropdown">
+          <li class="settings__item">
+            <label for="checkbox-trending" class="settings__item-text trending-label">
+              Посещаемое
+            </label>
+          </li>
+          <li class="settings__item">
+            <label for="checkbox-jokes" class="settings__item-text jokes-label">
+              Лучшие анекдоты
+            </label>
+          </li>
+          <li class="settings__item">
+            <label for="checkbox-tv" class="settings__item-text tv-label">
+              Телепрограмма
+            </label>
+          </li>
+          <li class="settings__item">
+            <label for="checkbox-cars" class="settings__item-text cars-label">
+              Автомобильные новости
+            </label>
+          </li>
+          <li class="settings__item">
+            <label for="checkbox-weather" class="settings__item-text weather-label">
+              Погода
+            </label>
+          </li>
+          <li class="settings__item">
+            <label for="checkbox-traffic" class="settings__item-text traffic-label">
+              Пробки
+            </label>
+          </li>
+          <li class="settings__item">
+            <label for="checkbox-map" class="settings__item-text map-label">
+              Карта Санкт-Петербурга
+            </label>
+          </li>
+          <li class="settings__item">
+            <label for="checkbox-affiche" class="settings__item-text affiche-label">
+              Афиша
+            </label>
+          </li>
+        </ul>
+      </div>
+      <div class="header__email">
+        <p class="header__login">login</p>
+        <p class="header__messages">Почта <span class="header__message-count">22</span></p>
+      </div>
+    </header>
+    <main class="main">
+      <section class="news">
+        <section class="news__container">
+          <div class="news__media-block">
+            <a href="#" class="media-block__title">Сейчас в СМИ</a>
+            <a href="#" class="media__city">в Санкт-Петербурге</a>
+            <span class="media__date">14 декабря, суббота 13:37</span>
+          </div>
+          <ul class="news__posts">
+            <li class="news__item">
+              <a href="#" class="news__item-link">
+                Rambler заявил права на веб-сервер Nginx
+              </a>
+            </li>
+            <li class="news__item">
+              <a href="#" class="news__item-link">
+                Huawei готовится обогнать Samsung на рынке смартфонов
+              </a>
+            </li>
+            <li class="news__item">
+              <a href="#" class="news__item-link">
+                Открытие «невозможной черной дыры», вероятно, оказалось ошибкой
+              </a>
+            </li>
+            <li class="news__item">
+              <a href="#" class="news__item-link">
+                Новые приложения KDE доступны для загрузки
+              </a>
+            </li>
+            <li class="news__item">
+              <a href="#" class="news__item-link">
+                Об атаках на операторов связи предупреждает Microsoft
+              </a>
+            </li>
+          </ul>
+          <ul class="currency">
+            <li class="currency__item">
+              <span class="currency__name">USD MOEX</span>
+              <span class="currency__cost">62,89</span>
+              <span class="currency__percent">+0,05</span>
+            </li>
+            <li class="currency__item">
+              <span class="currency__name">EUR MOEX</span>
+              <span class="currency__cost">69,90</span>
+              <span class="currency__percent">-0,05</span>
+            </li>
+            <li class="currency__item">
+              <span class="currency__name">НЕФТЬ</span>
+              <span class="currency__cost">64,77</span>
+              <span class="currency__percent">+0,42%</span>
+            </li>
+            <li class="currency__item">
+              <span class="currency__more">&middot;&middot;&middot;</span>
+            </li>
+          </ul>
+        </section>
+        <section class="news__promo">
+          <div class="promo__block">
+            <div class="promo__image-block">
+              <img src="img/alice.png" alt="Изображение к рекламе Алисы"
+              title="Алиса включит радио на Яндекс.Станции" class="promo__image">
+              <span class="promo__age-limit">0+</span>
+            </div>
+            <p class="promo__term">Акция до 31.12.2019</p>
+            <a href="#" class="promo__title">Алиса включит радио на Яндекс.Станции</a>
+            <p class="promo__description">Привыкайте к хорошему</p>
+          </div>
+        </section>
+      </section>
+      <section class="search">
+        <img src="img/ya-logo.png" alt="Логотип Яндекса" title="Логотип Яндекса" class="logo">
+        <div class="search__container">
+          <ul class="search__category-items">
+            <li class="search__category-item">
+              <a href="#" class="search__service-link">Видео</a>
+            </li>
+            <li class="search__category-item">
+              <a href="#" class="search__service-link">Картинки</a>
+            </li>
+            <li class="search__category-item">
+              <a href="#" class="search__service-link">Новости</a>
+            </li>
+            <li class="search__category-item">
+              <a href="#" class="search__service-link">Карты</a>
+            </li>
+            <li class="search__category-item">
+              <a href="#" class="search__service-link">Маркет</a>
+            </li>
+            <li class="search__category-item">
+              <a href="#" class="search__service-link">Переводчик</a>
+            </li>
+            <li class="search__category-item">
+              <a href="#" class="search__service-link">Музыка</a>
+            </li>
+            <li class="search__category-item">
+              <a href="#" class="search__service-link">ещё</a>
+            </li>
+          </ul>
+          <form class="search__form">
+            <img src="img/voice.svg" alt="Голосовой ввод" class="search__voice">
+            <img src="img/keyboard.svg" alt="Экранная клавиатура" class="search__keyboard">
+            <label for="search-field">
+              <input id="search-field" type="text" class="search__input-text" tabindex="1"
+              autofocus placeholder="Введите запрос&hellip;">
+            </label>
+            <input type="submit" class="search__input-submit" value="Найти" tabindex="-1">
+            <div class="search__triangle"></div>
+          </form>
+          <p class="search__example-block">Найдётся всё. Например,
+            <span class="search__example">Амигуруми</span>
+          </p>
+        </div>
+      </section>
+      <section class="partner">
+        <a href="#" class="partner__link">
+          <img src="img/partner.jpg" alt="Изображение с рекламой апартаментов на Васильевском"
+          title="Купить апартаменты на Васильевском" class="partner__image">
+        </a>
+      </section>
+      <section class="widgets">
+        <div class="widgets__column">
+          <article class="widgets__block widgets__trending">
+            <a href="#" class="widgets__title">Посещаемое</a>
+            <ul class="widgets__list">
+              <li class="widgets__item">
+                <a href="#" class="widgets__item-link">
+                  <span class="widgets__item_highlighted">Репетитор</span>
+                  &mdash; ЕГЭ-2020 и ОГЭ-2020
+                </a>
+              </li>
+              <li class="widgets__item">
+                <a href="#" class="widgets__item-link">
+                  <span class="widgets__item_highlighted">Авто.ру</span>
+                  &mdash; полноприводные авто
+                </a>
+              </li>
+              <li class="widgets__item">
+                <a href="#" class="widgets__item-link">
+                  <span class="widgets__item_highlighted">Недвижимость</span>
+                  &mdash; новые таунхаусы
+                </a>
+              </li>
+              <li class="widgets__item">
+                <a href="#" class="widgets__item-link">
+                  <span class="widgets__item_highlighted">Картинки</span>
+                  &mdash; для яркой презентации
+                </a>
+              </li>
+              <li class="widgets__item">
+                <a href="#" class="widgets__item-link">
+                  <span class="widgets__item_highlighted">Район</span>
+                  &mdash; бесплатные объявления
+                </a>
+              </li>
+              <li class="widgets__item">
+                <a href="#" class="widgets__item-link">
+                  <span class="widgets__item_highlighted">Эфиры</span>
+                  &mdash; фильмы вестерны
+                </a>
+              </li>
+              <li class="widgets__item">
+                <a href="#" class="widgets__item-link">
+                  <span class="widgets__item_highlighted">Беру</span>
+                  &mdash; Бонусы. Хочу экономить
+                </a>
+              </li>
+            </ul>
+          </article>
+          <article class="widgets__block widgets__jokes">
+            <a href="#" class="widgets__title">Лучшие анекдоты</a>
+            <input type="radio" name="radio-jokes" id="radio-jokes-1"
+            class="hidden-control radio-jokes-1" checked>
+            <input type="radio" name="radio-jokes" id="radio-jokes-2"
+            class="hidden-control radio-jokes-2">
+            <input type="radio" name="radio-jokes" id="radio-jokes-3"
+            class="hidden-control radio-jokes-3">
+            <input type="radio" name="radio-jokes" id="radio-jokes-4"
+            class="hidden-control radio-jokes-4">
+            <input type="radio" name="radio-jokes" id="radio-jokes-5"
+            class="hidden-control radio-jokes-5">
+            <div class="widgets__joke-wrapper widgets__joke-wrapper-1">
+              <p class="widgets__text">из красноярска до алушты</p>
+              <p class="widgets__text">примерно ехать восемь дней</p>
+              <p class="widgets__text">обратно сколько мы не знаем</p>
+              <p class="widgets__text">никто не хочет в красноярск</p>
+            </div>
+            <div class="widgets__joke-wrapper widgets__joke-wrapper-2">
+              <img src="img/meme.jpg" alt="Анекдот от Рика и Морти" title="Картинка анекдота"
+              class="widgets__image">
+            </div>
+            <div class="widgets__joke-wrapper widgets__joke-wrapper-3">
+              <p class="widgets__text">
+                Не повторяйте одну и ту же ошибку в вашем коде снова и снова.
+              </p>
+              <p class="widgets__text">
+                Создайте функцию с ней и вызывайте её каждый раз, когда понадобится.
+              </p>
+            </div>
+            <div class="widgets__joke-wrapper widgets__joke-wrapper-4">
+              <p class="widgets__text">
+                Как бы вы написали в своем резюме: &quot;Я поменял лампочку&quot;?
+              </p>
+              <p class="widgets__text">
+                Единолично управлял успешным обновлением и развертыванием новой системы освещения
+                окружающей среды с нулевым перерасходом средств и нулевым числом инцидентов в
+                области безопасности.
+              </p>
+            </div>
+            <div class="widgets__joke-wrapper widgets__joke-wrapper-5">
+              <p class="widgets__text">
+                У первака спрашивают: сколько будет 2x2 ? Он говорит, 4.
+              </p>
+              <p class="widgets__text">
+                У второкурсника спрашивают. Он достаёт калькулятор, считает и говорит: 4.
+              </p>
+              <p class="widgets__text">
+                У третьекурсника. Он бежит в кабинет, пишет программу, она считает; говорит 4.
+              </p>
+              <p class="widgets__text">
+                У четверокурсника спрашивают, а он отвечает: &quot;Я что, все константы помнить
+                должен?!&quot;
+              </p>
+            </div>
+            <label for="radio-jokes-2" class="widgets__joke-label widgets__joke-label-2">
+            &#8635; Показать ещё
+            </label>
+            <label for="radio-jokes-3" class="widgets__joke-label widgets__joke-label-3">
+            &#8635; Показать ещё
+            </label>
+            <label for="radio-jokes-4" class="widgets__joke-label widgets__joke-label-4">
+            &#8635; Показать ещё
+            </label>
+            <label for="radio-jokes-5" class="widgets__joke-label widgets__joke-label-5">
+            &#8635; Показать ещё
+            </label>
+            <label for="radio-jokes-1" class="widgets__joke-label widgets__joke-label-1">
+            &#8635; Показать ещё
+            </label>
+          </article>
+        </div>
+        <div class="widgets__column">
+          <article class="widgets__block widgets__tv">
+            <a href="#" class="widgets__title">Телепрограмма
+              <span class="widgets__title-badge">Эфир</span>
+            </a>
+            <ul class="widgets__list">
+              <li class="widgets__item">
+                <a href="#" class="widgets__item-link">
+                  14:00 Соник Бум
+                  <span class="widgets__item_muted">Карусель</span>
+                </a>
+              </li>
+              <li class="widgets__item">
+                <a href="#" class="widgets__item-link">
+                  14:30 Их разлучит только&hellip;
+                  <span class="widgets__item_muted">ТВ Центр</span>
+                </a>
+              </li>
+              <li class="widgets__item">
+                <a href="#" class="widgets__item-link">
+                  15:00 Квартирный вопрос
+                  <span class="widgets__item_muted">НТВ-Петербург</span>
+                </a>
+              </li>
+              <li class="widgets__item">
+                <a href="#" class="widgets__item-link">
+                  15:30 Копи царя Соломона
+                  <span class="widgets__item_muted">СТС</span>
+                </a>
+              </li>
+              <li class="widgets__item">
+                <a href="#" class="widgets__item-link">
+                  16:00 Черная метка
+                  <span class="widgets__item_muted">Россия 1</span>
+                </a>
+              </li>
+              <li class="widgets__item">
+                <a href="#" class="widgets__item-link">
+                  16:30 Искатели
+                  <span class="widgets__item_muted">Культура</span>
+                </a>
+              </li>
+            </ul>
+          </article>
+          <article class="widgets__block widgets__cars">
+            <a href="#" class="widgets__title">Автомобильные новости</a>
+            <div class="widgets__list-wrapper">
+              <ul class="widgets__list widgets__list_cars">
+                <li class="widgets__item">
+                  <a href="#" class="widgets__item-link">
+                    Серийное производство автомобилей Aurus начнется в 2021 году
+                    <span class="widgets__item_muted">1:07</span>
+                  </a>
+                </li>
+                <li class="widgets__item">
+                  <a href="#" class="widgets__item-link">
+                    Новый седан Kia Optima появился у дилеров
+                    <span class="widgets__item_muted">11:31</span>
+                  </a>
+                </li>
+                <li class="widgets__item">
+                  <a href="#" class="widgets__item-link">
+                    Появилась детальная информация о &laquo;Русском Прадо&raquo;
+                    <span class="widgets__item_muted">12:40</span>
+                  </a>
+                </li>
+                <li class="widgets__item">
+                  <a href="#" class="widgets__item-link">
+                    Объявили цену на кроссовер Skoda Karoq для России
+                    <span class="widgets__item_muted">12:45</span>
+                  </a>
+                </li>
+                <li class="widgets__item">
+                  <a href="#" class="widgets__item-link">
+                    Раскрыта внешность обновленного Volkswagen Teramont
+                    <span class="widgets__item_muted">13:00</span>
+                  </a>
+                </li>
+                <li class="widgets__item">
+                  <a href="#" class="widgets__item-link">
+                    В России выросло число новых автомобилей с ЭПТС до 50%
+                    <span class="widgets__item_muted">13:11</span>
+                  </a>
+                </li>
+                <li class="widgets__item">
+                  <a href="#" class="widgets__item-link">
+                    Kia показала новый фирменный логотип
+                    <span class="widgets__item_muted">13:17</span>
+                  </a>
+                </li>
+                <li class="widgets__item">
+                  <a href="#" class="widgets__item-link">
+                    Импорт легковых авто вырос почти на 4%
+                    <span class="widgets__item_muted">13:36</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+        <div class="widgets__column">
+          <article class="widgets__block widgets__weather">
+            <a href="#" class="widgets__title">
+              Погода
+              <img src="img/weather.svg" alt="Погода" title="Погода" class="widgets__icon">
+              +1 &deg;С
+            </a>
+            <p class="widgets__text">Вечер +1, ночь -1</p>
+          </article>
+          <article class="widgets__block widgets__traffic">
+            <a href="#" class="widgets__title">Пробки
+              <img src="img/traffic.svg" alt="Пробки" title="Пробки" class="widgets__icon">
+              1 балл
+            </a>
+            <p class="widgets__text">На дорогах свободно</p>
+          </article>
+          <article class="widgets__block widgets__map">
+            <a href="#" class="widgets__title">Карта Санкт-Петербурга</a>
+            <ul class="widgets__list">
+              <li class="widgets__item widgets__item_inline">
+                <a href="#" class="widgets__item-link">Метро</a>
+              </li>
+              <li class="widgets__item widgets__item_inline">
+                <a href="#" class="widgets__item-link">Такси</a>
+              </li>
+              <li class="widgets__item widgets__item_inline">
+                <a href="#" class="widgets__item-link">Расписания</a>
+              </li>
+              <li class="widgets__item widgets__item_inline">
+                <a href="#" class="widgets__item-link">Сообщество соседей</a>
+              </li>
+            </ul>
+          </article>
+          <article class="widgets__block widgets__affiche">
+            <a href="#" class="widgets__title">Афиша</a>
+            <ul class="widgets__list">
+              <li class="widgets__item">
+                <a href="#" class="widgets__item-link">
+                  Джуманджи: Новый уровень
+                  <span class="widgets__item_muted">фэнтези</span>
+                </a>
+              </li>
+              <li class="widgets__item">
+                <a href="#" class="widgets__item-link">
+                  Рождество на двоих
+                  <span class="widgets__item_muted">драма</span>
+                </a>
+              </li>
+              <li class="widgets__item">
+                <a href="#" class="widgets__item-link">
+                  Холодное сердце 2
+                  <span class="widgets__item_muted">приключения</span>
+                </a>
+              </li>
+              <li class="widgets__item">
+                <a href="#" class="widgets__item-link">
+                  Сиротский Бруклин
+                  <span class="widgets__item_muted">криминальный</span>
+                </a>
+              </li>
+              <li class="widgets__item">
+                <a href="#" class="widgets__item-link">
+                  Тайна Мосли
+                  <span class="widgets__item_muted">мультфильм</span>
+                </a>
+              </li>
+              <li class="widgets__item">
+                <a href="#" class="widgets__item-link">
+                  <span class="widgets__item_highlighted">Концерты</span> &mdash;
+                  <span class="widgets__item_highlighted">The Hatters</span>
+                </a>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,357 @@
+:root {
+  --color-active: #222;
+  --color-primary: #444;
+  --color-selection: #666;
+  --color-disabled: #aaa;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+
+  font: 14px 'Roboto', sans-serif;
+}
+
+.sprite {
+  position: absolute;
+
+  visibility: hidden;
+}
+
+.hidden-control {
+  display: none;
+}
+
+.centering-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  width: 720px;
+  height: 512px;
+  padding: 0 202px;
+
+  background-color: #fff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.image-controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 316px;
+  padding: 10px 0;
+}
+
+.image-controls__scale,
+.image-controls__rotate {
+  display: none;
+}
+
+.preview {
+  position: relative;
+
+  overflow: hidden;
+
+  width: 316px;
+  height: 316px;
+}
+
+.preview__edited-photo,
+.preview__source-photo {
+  display: block;
+
+  width: 316px;
+  height: 316px;
+
+  transition: opacity 100ms ease-in-out;
+
+  object-fit: contain;
+  user-select: none;
+}
+
+.preview__source-photo,
+.preview__scaling-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.preview__source-photo {
+  opacity: 0;
+}
+
+.preview__scaling-wrapper,
+.preview__rotation-wrapper,
+.preview__edited-photo {
+  transition: transform 200ms linear, filter 300ms ease-in-out;
+}
+
+.image-controls__button,
+.image-controls__logo {
+  width: 25px;
+  height: 25px;
+
+  transition: opacity 100ms ease-in-out;
+
+  cursor: pointer;
+  fill: var(--color-primary);
+}
+
+.image-controls__button:hover {
+  fill: var(--color-selection);
+}
+
+.image-controls__button:active {
+  fill: var(--color-active);
+}
+
+.filters {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+
+  width: 316px;
+  margin: 10px 0;
+
+  transition: opacity 100ms ease-in-out;
+}
+
+.filters__previews {
+  overflow: hidden;
+  flex-grow: 2;
+}
+
+.filters__row {
+  display: flex;
+  flex-direction: row;
+
+  transition: margin-left 200ms linear;
+}
+
+.filters__scroll-icon {
+  flex-shrink: 0;
+
+  width: 16px;
+  height: 24px;
+
+  fill: var(--color-primary);
+}
+
+.filters__scroll-icon_disabled {
+  fill: var(--color-disabled);
+}
+
+.filters__scroll-icon:not(.filters__scroll-icon_disabled):hover {
+  cursor: pointer;
+  fill: var(--color-selection);
+}
+
+.filters__label {
+  display: inline-block;
+  flex-shrink: 0;
+
+  margin: 0 5px;
+
+  color: var(--color-primary);
+  cursor: pointer;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.filters__image {
+  display: block;
+
+  width: 85px;
+  height: 85px;
+
+  object-fit: cover;
+}
+
+.filters__image_none {
+  filter: none;
+}
+
+.filters__image_spb {
+  filter: grayscale(100%);
+}
+.filters__image_yalta {
+  filter: sepia(100%);
+}
+.filters__image_ural {
+  filter: hue-rotate(0.5turn);
+}
+.filters__image_invert {
+  filter: invert(100%);
+}
+
+.filters__scroll-button {
+  display: none;
+}
+
+/* Animation keyframes */
+@keyframes blinking {
+  from {
+    opacity: 1;
+  }
+  85% {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes filter-none {
+  to {
+    filter: none;
+  }
+}
+
+@keyframes filter-spb {
+  to {
+    filter: grayscale(100%);
+  }
+}
+
+@keyframes filter-yalta {
+  to {
+    filter: sepia(100%);
+  }
+}
+
+@keyframes filter-ural {
+  to {
+    filter: hue-rotate(0.5turn);
+  }
+}
+
+@keyframes filter-invert {
+  to {
+    filter: invert(100%);
+  }
+}
+
+/* CSS selector magic */
+.checkbox-view-source:checked ~ .dialog .image-controls__logo {
+  animation: blinking 1.3s ease-in-out infinite;
+}
+
+.checkbox-view-source:checked ~ .dialog .preview__source-photo {
+  opacity: 1;
+}
+
+.checkbox-view-source:checked ~ .dialog .preview__scaling-wrapper,
+.checkbox-view-source:checked ~ .dialog .image-controls__button,
+.checkbox-view-source:checked ~ .dialog .filters {
+  opacity: 0;
+}
+
+.checkbox-fill-canvas:checked ~ .dialog .icon-fill-canvas {
+  fill: var(--color-active);
+}
+
+.checkbox-fill-canvas:checked ~ .dialog .preview__edited-photo {
+  object-fit: cover;
+}
+
+.radio-scale_100:checked ~ .dialog .image-controls__scale_120,
+.radio-scale_120:checked ~ .dialog .image-controls__scale_150,
+.radio-scale_150:checked ~ .dialog .image-controls__scale_100 {
+  display: block;
+}
+
+.radio-scale_100:checked ~ .dialog .preview__scaling-wrapper {
+  transform: scale(1);
+}
+
+.radio-scale_120:checked ~ .dialog .preview__scaling-wrapper {
+  transform: scale(1.2);
+}
+
+.radio-scale_150:checked ~ .dialog .preview__scaling-wrapper {
+  transform: scale(1.5);
+}
+
+.radio-rotate_0:checked ~ .dialog .image-controls__rotate_90,
+.radio-rotate_90:checked ~ .dialog .image-controls__rotate_180,
+.radio-rotate_180:checked ~ .dialog .image-controls__rotate_270,
+.radio-rotate_270:checked ~ .dialog .image-controls__rotate_0 {
+  display: block;
+}
+
+.radio-rotate_0:checked ~ .dialog .preview__rotation-wrapper {
+  transform: rotate(0deg);
+}
+
+.radio-rotate_90:checked ~ .dialog .preview__rotation-wrapper {
+  transform: rotate(90deg);
+}
+
+.radio-rotate_180:checked ~ .dialog .preview__rotation-wrapper {
+  transform: rotate(180deg);
+}
+
+.radio-rotate_270:checked ~ .dialog .preview__rotation-wrapper {
+  transform: rotate(270deg);
+}
+
+.checkbox-mirror:checked ~ .dialog .preview__edited-photo {
+  transform: scale(-1, 1);
+}
+
+.carousel-pos_1:checked ~ .dialog .filters__scroll-button-left-1,
+.carousel-pos_1:checked ~ .dialog .filters__scroll-button-right-1,
+.carousel-pos_2:checked ~ .dialog .filters__scroll-button-left-2,
+.carousel-pos_2:checked ~ .dialog .filters__scroll-button-right-2,
+.carousel-pos_3:checked ~ .dialog .filters__scroll-button-left-3,
+.carousel-pos_3:checked ~ .dialog .filters__scroll-button-right-3 {
+  display: block;
+}
+
+.carousel-pos_2:checked ~ .dialog .filters__row {
+  margin-left: -95px;
+}
+
+.carousel-pos_3:checked ~ .dialog .filters__row {
+  margin-left: -190px;
+}
+
+.radio-filter_none:checked ~ .dialog .filters__label-none,
+.radio-filter_spb:checked ~ .dialog .filters__label-spb,
+.radio-filter_yalta:checked ~ .dialog .filters__label-yalta,
+.radio-filter_ural:checked ~ .dialog .filters__label-ural,
+.radio-filter_invert:checked ~ .dialog .filters__label-invert {
+  font-weight: 700;
+}
+
+.radio-filter_none:checked ~ .dialog .preview__edited-photo {
+  animation: filter-none 300ms ease-in-out forwards;
+}
+
+.radio-filter_spb:checked ~ .dialog .preview__edited-photo {
+  animation: filter-spb 300ms ease-in-out forwards;
+}
+
+.radio-filter_yalta:checked ~ .dialog .preview__edited-photo {
+  animation: filter-yalta 300ms ease-in-out forwards;
+}
+
+.radio-filter_ural:checked ~ .dialog .preview__edited-photo {
+  animation: filter-ural 300ms ease-in-out forwards;
+}
+
+.radio-filter_invert:checked ~ .dialog .preview__edited-photo {
+  animation: filter-invert 300ms ease-in-out forwards;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <!-- Chrome, Firefox OS and Opera on Android topbar color -->
+    <meta name="theme-color" content="#ded7d3" />
+    <!-- Windows Phone topbar color -->
+    <meta name="msapplication-navbutton-color" content="#ded7d3" />
+    <!-- iOS Safari topbar color -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#ded7d3" />
+    <title>PigTinder</title>
+    <link
+    href="https://fonts.googleapis.com/css?family=Montserrat:600,800|Rubik:400,700&display=swap"
+    rel="stylesheet">
+    <link href="./index.css" rel="stylesheet">
+  </head>
+  <body>
+    <main class="content">
+      <h1 class="logo"><strong class="logo_strong">pig</strong>tinder</h1>
+      <div class="workspace" id="workspace"></div>
+      <div class="actions">
+        <button class="actions__button" id="dislike-button">
+          <div class="actions__button-ripple actions__button-ripple_dislike"></div>
+          <div class="actions__icon actions__icon_dislike">
+            <svg version="1.1" viewBox="0 0 12.7 12.7"
+            xmlns="http://www.w3.org/2000/svg">
+              <g transform="translate(0 -284.3)">
+                <path d="m1.8303 287.19c-0.14729 0.14728-0.14729 0.38444 0 0.53172l2.9245
+                2.9246-2.9245 2.9245c-0.14729 0.14728-0.14729 0.38445 0 0.53173l1.0635
+                1.0635c0.14729 0.14728 0.38444 0.14728 0.53173 0l2.9245-2.9246 2.9245
+                2.9246c0.14729 0.14728 0.38444 0.14728 0.53173 0l1.0635-1.0635c0.14729-0.14728
+                0.14729-0.38445 0-0.53173l-2.9245-2.9245 2.9245-2.9246c0.14729-0.14728
+                0.14729-0.38444 0-0.53172l-1.0635-1.0635c-0.14729-0.14728-0.38444-0.14728-0.53173
+                0l-2.9245 2.9245-2.9245-2.9245c-0.14729-0.14728-0.38444-0.14728-0.53173 0z"/>
+              </g>
+            </svg>
+          </div>
+        </button>
+        <button class="actions__button" id="superlike-button">
+          <div class="actions__button-ripple actions__button-ripple_superlike"></div>
+          <div class="actions__icon actions__icon_superlike">
+            <svg version="1.1" viewBox="0 0 12.7 12.7"
+            xmlns="http://www.w3.org/2000/svg">
+              <g transform="translate(0,-284.3)">
+                <path transform="matrix(.085824 .013593 -.013593 .085824 1.7208 278.41)"
+                d="m120.84 181.98c-3.0047 3.0047-36.045-14.311-40.242-13.646s-30.269 27.343-34.055
+                25.414c-3.7861-1.9291 2.4722-38.703
+                0.54309-42.489-1.9291-3.7861-35.358-20.338-34.694-24.535 0.66473-4.197 37.573-9.6087
+                40.577-12.613 3.0047-3.0047 8.4164-39.913 12.613-40.577 4.1969-0.66473 20.749 32.765
+                24.535 34.694 3.7861 1.9291 40.56-4.3292 42.489-0.54308 1.9291 3.7861-24.749
+                29.858-25.414 34.055-0.66473 4.1969 16.651 37.237 13.646 40.242z"/>
+              </g>
+            </svg>
+          </div>
+        </button>
+        <button class="actions__button" id="like-button">
+          <div class="actions__button-ripple actions__button-ripple_like"></div>
+          <div class="actions__icon actions__icon_like">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <path d="m15.473 6.6734c-10.941-0.19671-21.066 16.914 8.4321 34.655 0.03234-0.0582
+              0.15672-0.0582 0.18906 0 30.45-18.313 18.68-35.952 7.3734-34.579-4.4079 0.5353-6.488
+              2.9817-7.4679
+              5.0857-0.97991-2.1041-3.06-4.5505-7.4679-5.0857-0.35335-0.042929-0.70579-0.069273
+              -1.0587-0.075632z"/>
+            </svg>
+          </div>
+        </button>
+      </div>
+    </main>
+    <footer class="footer">
+      <p class="footer__text">
+        <a class="footer__link" href="mailto:support@pigtinder.com">support@pigtinder.com</a>
+      </p>
+      <p class="footer__text footer__copyright">
+        &copy; 2019-2020 Guinea LLC
+      </p>
+    </footer>
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
