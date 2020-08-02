@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Задача «Саджест»</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+    rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <form id="search" class="search">
+        <label for="search-field" class="search__wrap">
+          <input type="text" id="search-field" name="search-field" class="search__field"
+          placeholder="Search&hellip;" autocomplete="off" autofocus aria-label="Search">
+        </label>
+        <button type="button" id="search-clear" class="search__clear" disabled>
+          <svg class="search__clear-icon">
+            <use xlink:href="img/clear.svg#icon"></use>
+          </svg>
+        </button>
+        <button type="submit" id="search-submit" class="search__submit">
+          <svg class="search__submit-icon">
+            <use xlink:href="img/find.svg#icon"></use>
+          </svg>
+        </button>
+        <div id="search-suggest" class="search__suggest"></div>
+      </form>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
